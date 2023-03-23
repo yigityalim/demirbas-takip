@@ -1,6 +1,8 @@
 <?php
 
-$app = new \core\Bootstrap();
+use Core\Bootstrap;
+
+$app = new Bootstrap();
 
 $app->router->controller('/', 'Home', [
     'before' => \App\Middlewares\CheckAuth::class
