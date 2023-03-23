@@ -8,18 +8,17 @@ use Core\Controller;
 class Home extends Controller
 {
 
-    public $middlewareBefore = [
+    public array $middlewareBefore = [
         CheckAuth::class
     ];
 
     public function main(): string
     {
-        $name = 'yiğit';
-        $surname = '<b>yalım</b>';
-        return $this->view->show('home', compact('name', 'surname'));
+        $name = 'Mehmet';
+        return $this->view('home', compact('name'));
     }
 
-    public function uyelerSayfasi()
+    public function uyelerSayfasi(): string
     {
         return 'user sayfası';
     }

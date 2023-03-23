@@ -8,10 +8,8 @@
     <title><?php echo $__env->yieldContent('title'); ?></title>
 </head>
 <body>
-
 <main>
     <?php echo $__env->yieldContent('content'); ?>
 </main>
-
 </body>
 </html><?php /**PATH /Applications/MAMP/htdocs/proje/public/views/layout.blade.php ENDPATH**/ ?>

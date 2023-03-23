@@ -3,9 +3,11 @@
 namespace Core;
 
 use Buki\Router\Router;
+use Exception;
 
 class Bootstrap
 {
+
     public Router $router;
     public View $view;
 
@@ -26,7 +28,10 @@ class Bootstrap
         $this->view = new View();
     }
 
-    public function run()
+    /**
+     * @throws Exception
+     */
+    public function run(): void
     {
         $this->router->run();
     }

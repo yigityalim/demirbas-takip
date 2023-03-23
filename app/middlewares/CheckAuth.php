@@ -8,7 +8,7 @@ namespace App\Middlewares;
  */
 class CheckAuth
 {
-    public function handle()
+    public function handle(): bool
     {
         // kontroller
         return true;

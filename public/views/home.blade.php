@@ -2,7 +2,6 @@
 
 @section('title', 'Anasayfa')
 
-
 @section('content')
-    <h3>Hoşgeldin, {{ $name }} {!! $surname !!}</h3>
+    <h1>Anasayfa {{ $name }}</h1>
 @endsection
