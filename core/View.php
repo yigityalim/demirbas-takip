@@ -8,7 +8,7 @@ use Valitron\Validator;
 class View
 {
 
-    private $validator;
+    private Validator $validator;
 
     public function __construct(Validator $validator)
     {
@@ -17,7 +17,7 @@ class View
 
     public function show($view, $data = []): string
     {
-        $blade = new Blade(dirname(__DIR__) . '/public/views', dirname(__DIR__) . '/public/cache');
+        $blade = new Blade(dirname(__DIR__) . '/resources/views', dirname(__DIR__) . '/resources/cache');
         $blade->share('errors', $this->validator->errors());
         $blade->share('_posts', $this->validator->data());
 

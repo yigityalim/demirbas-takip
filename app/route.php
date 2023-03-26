@@ -15,5 +15,5 @@ $app->router->group('/admin', function ($router) {
 });
 
 $app->router->error(function ($code, $message) {
-    die("Hata: {$code} - {$message}");
+    die("Hata: {$code} <br><br> {$message}");
 });
